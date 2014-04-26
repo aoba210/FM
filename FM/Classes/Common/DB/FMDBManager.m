@@ -30,4 +30,15 @@ static NSString *const kShopSettingDataTableName = @"ShopSettingData";
     [coreDataManager save];
 }
 
+/**
+ * 店舗設定データを検索
+ */
++ (NSArray *)selectAllSettingShopData
+{
+    CoreDataManager *coreDataManager = [CoreDataManager getInstance:kDBName];
+    NSArray *playerDataArray = [coreDataManager select:kShopSettingDataTableName where:nil];
+    
+    return playerDataArray;
+}
+
 @end

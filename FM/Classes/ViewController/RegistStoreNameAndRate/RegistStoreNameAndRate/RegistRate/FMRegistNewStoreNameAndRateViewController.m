@@ -34,7 +34,7 @@
 {
     [super viewDidLoad];
     
-    //ビューの初期化時にジェスチャをself.viewに登録
+    //キーボードを閉じるためにビューの初期化時にジェスチャをself.viewに登録
     self.singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onSingleTap:)];
     self.singleTap.delegate = self;
     self.singleTap.numberOfTapsRequired = 1;

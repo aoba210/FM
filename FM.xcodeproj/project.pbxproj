@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D8047D9C190962820097126E /* FMRegistShopTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8047D9B190962820097126E /* FMRegistShopTableViewCell.xib */; };
+		D8047D9F190963970097126E /* FMRegistShopTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8047D9E190963970097126E /* FMRegistShopTableViewCell.m */; };
 		D8AB0161188AC9EF00E3EA7A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8AB0160188AC9EF00E3EA7A /* Foundation.framework */; };
 		D8AB0163188AC9EF00E3EA7A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8AB0162188AC9EF00E3EA7A /* CoreGraphics.framework */; };
 		D8AB0165188AC9EF00E3EA7A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8AB0164188AC9EF00E3EA7A /* UIKit.framework */; };
@@ -54,6 +56,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D8047D9B190962820097126E /* FMRegistShopTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FMRegistShopTableViewCell.xib; path = ../../../../Resouce/xib/FMRegistShopTableViewCell.xib; sourceTree = "<group>"; };
+		D8047D9D190963970097126E /* FMRegistShopTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMRegistShopTableViewCell.h; path = ../RegistStoreNameAndRate/FMRegistShopTableViewCell.h; sourceTree = "<group>"; };
+		D8047D9E190963970097126E /* FMRegistShopTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMRegistShopTableViewCell.m; path = ../RegistStoreNameAndRate/FMRegistShopTableViewCell.m; sourceTree = "<group>"; };
 		D8AB015D188AC9EF00E3EA7A /* FM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8AB0160188AC9EF00E3EA7A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D8AB0162188AC9EF00E3EA7A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -278,9 +283,9 @@
 		D8AB01A0188AC9EF00E3EA7A /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				D8AB01FB188B1DBD00E3EA7A /* Regist */,
-				D8AB01DB188AEF9700E3EA7A /* Entry */,
 				D8AB01A7188ADCAE00E3EA7A /* WarRecord */,
+				D8AB01DB188AEF9700E3EA7A /* Entry */,
+				D8AB01FB188B1DBD00E3EA7A /* Regist */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -480,6 +485,9 @@
 			children = (
 				D8AB01FF188B1E4700E3EA7A /* FMStoreNameAndRateTableViewViewController.h */,
 				D8AB0200188B1E4700E3EA7A /* FMStoreNameAndRateTableViewViewController.m */,
+				D8047D9D190963970097126E /* FMRegistShopTableViewCell.h */,
+				D8047D9E190963970097126E /* FMRegistShopTableViewCell.m */,
+				D8047D9B190962820097126E /* FMRegistShopTableViewCell.xib */,
 			);
 			path = StoreNameAndRateTableView;
 			sourceTree = "<group>";
@@ -600,6 +608,7 @@
 			files = (
 				D8AB0177188AC9EF00E3EA7A /* Main_iPad.storyboard in Resources */,
 				D8AB017C188AC9EF00E3EA7A /* Images.xcassets in Resources */,
+				D8047D9C190962820097126E /* FMRegistShopTableViewCell.xib in Resources */,
 				D8AB0174188AC9EF00E3EA7A /* Main_iPhone.storyboard in Resources */,
 				D8AB016B188AC9EF00E3EA7A /* InfoPlist.strings in Resources */,
 			);
@@ -632,6 +641,7 @@
 				D8AB0171188AC9EF00E3EA7A /* FMAppDelegate.m in Sources */,
 				D8AB020B188B211200E3EA7A /* FMDetailStoreNameAndRateViewController.m in Sources */,
 				D8AB01DA188AEF2100E3EA7A /* FMWarRecordListOfEachStoreViewController.m in Sources */,
+				D8047D9F190963970097126E /* FMRegistShopTableViewCell.m in Sources */,
 				D8AB01F6188B0E4F00E3EA7A /* FMEntryIncomeAndExpenditureViewController.m in Sources */,
 				D8C3484C189C128700A6273C /* FMRegistNewStoreNameAndRateViewController.m in Sources */,
 				D8C34836189C041C00A6273C /* PlayData.m in Sources */,

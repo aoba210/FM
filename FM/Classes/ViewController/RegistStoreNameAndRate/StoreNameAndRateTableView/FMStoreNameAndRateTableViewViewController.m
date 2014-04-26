@@ -7,8 +7,13 @@
 //
 
 #import "FMStoreNameAndRateTableViewViewController.h"
+#import "FMDBManager.h"
+#import "FMRegistShopTableViewCell.h"
 
 @interface FMStoreNameAndRateTableViewViewController ()
+{
+    int registShopDataCount;
+}
 
 @end
 
@@ -27,11 +32,13 @@
 {
     [super viewDidLoad];
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    NSArray * registShopData = [FMDBManager selectAllSettingShopData];
+    NSLog(@"array = %d", registShopData.count);
+    registShopDataCount = registShopData.count;
+    
+//    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([FMRegistShopTableViewCell class]) bundle:nil] forCellReuseIdentifier:@"registShopCell"];
+    UINib *nib = [UINib nibWithNibName:@"FMRegistShopTableViewCell" bundle:nil];
+    [self.tableView registerNib:nib forCellReuseIdentifier:@"Cell"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -51,11 +58,11 @@
     return 1;	// 0 -> 1 に変更
 }
 /**
- * 登録してある店舗の数だけ返す // 未実装/////////////////////////////////////////////////////////////
+ * 登録してある店舗の数だけ返す // 未実装///////
  */
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;	// 0 -> 10 に変更
+    return registShopDataCount;	// 0 -> 10 に変更
 }
 
 /**
@@ -71,67 +78,19 @@
  */
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     //dequeueReusableCellWithIdentifierに識別文字列を渡すことでインスタンスを取得できるようにする
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
-    if (cell == nil) {
-        // 再利用時のセルの識別文字列を指定
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
-    }
-    cell.textLabel.text = [NSString stringWithFormat:@"%ld", (long)indexPath.row]; // 何番目のセルかを表示させました
+    FMRegistShopTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    cell.registShopLabel.text = @"ああああ";
+    
     return cell;
+    
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+//    if (cell == nil) {
+//        // 再利用時のセルの識別文字列を指定
+//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+//    }
+//    cell.textLabel.text = [NSString stringWithFormat:@"%ld", (long)indexPath.row]; // 何番目のセルかを表示させました
+//    return cell;
 }
 
-
-
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a story board-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-
- */
 
 @end
