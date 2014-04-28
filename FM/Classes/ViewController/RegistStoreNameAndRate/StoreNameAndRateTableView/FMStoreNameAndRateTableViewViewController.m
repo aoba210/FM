@@ -12,7 +12,7 @@
 
 @interface FMStoreNameAndRateTableViewViewController ()
 {
-    int registShopDataCount;
+    NSArray *registShopData;
 }
 
 @end
@@ -23,7 +23,6 @@
 {
     self = [super initWithStyle:style];
     if (self) {
-        // Custom initialization
     }
     return self;
 }
@@ -32,11 +31,7 @@
 {
     [super viewDidLoad];
 
-    NSArray * registShopData = [FMDBManager selectAllSettingShopData];
-    NSLog(@"array = %d", registShopData.count);
-    registShopDataCount = registShopData.count;
-    
-//    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([FMRegistShopTableViewCell class]) bundle:nil] forCellReuseIdentifier:@"registShopCell"];
+    registShopData = [FMDBManager selectAllSettingShopData];
     UINib *nib = [UINib nibWithNibName:@"FMRegistShopTableViewCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"Cell"];
 }
@@ -44,7 +39,6 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
@@ -54,15 +48,14 @@
  */
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    // Return the number of sections.
-    return 1;	// 0 -> 1 に変更
+    return 1;
 }
 /**
- * 登録してある店舗の数だけ返す // 未実装///////
+ * 登録してある店舗の数だけ返す
  */
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return registShopDataCount;	// 0 -> 10 に変更
+    return registShopData.count;
 }
 
 /**
@@ -82,14 +75,6 @@
     cell.registShopLabel.text = @"ああああ";
     
     return cell;
-    
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
-//    if (cell == nil) {
-//        // 再利用時のセルの識別文字列を指定
-//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
-//    }
-//    cell.textLabel.text = [NSString stringWithFormat:@"%ld", (long)indexPath.row]; // 何番目のセルかを表示させました
-//    return cell;
 }
 
 
