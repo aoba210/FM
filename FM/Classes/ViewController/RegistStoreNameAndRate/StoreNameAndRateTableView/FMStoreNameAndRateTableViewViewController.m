@@ -80,7 +80,10 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     FMRegistShopTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     shopSettingDataEntity = [registShopDataArray objectAtIndex:indexPath.row];
-    cell.registShopLabel.text = shopSettingDataEntity.storeName;
+    NSString *storeName = shopSettingDataEntity.storeName;
+    NSString *rate = [shopSettingDataEntity.rate stringValue];
+    NSString *labelText = [NSString stringWithFormat:@"%@ %@", storeName, rate];
+    cell.registShopLabel.text = labelText;
     
     return cell;
 }
