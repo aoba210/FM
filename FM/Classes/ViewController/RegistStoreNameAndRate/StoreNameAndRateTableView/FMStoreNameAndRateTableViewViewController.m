@@ -39,7 +39,8 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     registShopDataArray = [FMDBManager selectAllSettingShopData];
-//    NSLog(@"name = %@", shopSettingDataEntity.fee);
+    //TableViewCellのハイライトを消す。
+    [self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:NO];
     
 }
 
@@ -86,6 +87,13 @@
     cell.registShopLabel.text = labelText;
     
     return cell;
+}
+
+/**
+ * Cell が選択された時
+ */
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath: (NSIndexPath*) indexPath{
+    [self performSegueWithIdentifier:@"toFMRegistNewStoreNameAndRateViewController" sender:self];
 }
 
 
