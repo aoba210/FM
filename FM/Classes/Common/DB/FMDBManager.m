@@ -8,8 +8,8 @@
 
 #import "FMDBManager.h"
 #import "CoreDataManager.h"
-#import "ShopSettingData.h"
-#import "PlayData.h"
+#import "ShopSettingDataEntity.h"
+#import "PlayDataEntity.h"
 
 static NSString *const kDBName = @"FMModel";
 static NSString *const kShopSettingDataTableName = @"ShopSettingData";
@@ -23,7 +23,7 @@ static NSString *const kShopSettingDataTableName = @"ShopSettingData";
 + (void)registStoreName:(NSString *)storeName rate:(NSNumber *)rate fee:(NSNumber *)fee
 {
     CoreDataManager *coreDataManager = [CoreDataManager getInstance:kDBName];
-    ShopSettingData *shopSettingData = (ShopSettingData *)[coreDataManager new:kShopSettingDataTableName];
+    ShopSettingDataEntity *shopSettingData = (ShopSettingDataEntity *)[coreDataManager new:kShopSettingDataTableName];
     [shopSettingData setStoreName:storeName];
     [shopSettingData setFee:fee];
     [shopSettingData setRate:rate];
