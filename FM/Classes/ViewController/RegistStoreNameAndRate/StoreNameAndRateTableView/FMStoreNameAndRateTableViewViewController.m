@@ -13,6 +13,7 @@
 @interface FMStoreNameAndRateTableViewViewController ()
 {
     NSArray *registShopDataArray;
+    ShopSettingDataEntity *shopSettingDataEntity;
 }
 
 @end
@@ -38,9 +39,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     registShopDataArray = [FMDBManager selectAllSettingShopData];
-    ShopSettingDataEntity *shopSettingDataEntity = [registShopDataArray objectAtIndex:1];
-    NSLog(@"name = %@", shopSettingDataEntity.fee);
-    
+//    NSLog(@"name = %@", shopSettingDataEntity.fee);
     
 }
 
@@ -80,7 +79,8 @@
  */
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     FMRegistShopTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    cell.registShopLabel.text = @"ああああ";
+    shopSettingDataEntity = [registShopDataArray objectAtIndex:indexPath.row];
+    cell.registShopLabel.text = shopSettingDataEntity.storeName;
     
     return cell;
 }
