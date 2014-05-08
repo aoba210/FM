@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="13B42" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="PlayData" representedClassName="PlayData" syncable="YES">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13C1021" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="PlayDataEntity" representedClassName="PlayData" syncable="YES">
         <attribute name="balanceTotal" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="firstRank" optional="YES" attributeType="String" syncable="YES"/>
@@ -9,13 +9,13 @@
         <attribute name="storeName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="thirdRank" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
-    <entity name="ShopSettingData" representedClassName="ShopSettingData" syncable="YES">
+    <entity name="ShopSettingDataEntity" representedClassName="ShopSettingData" syncable="YES">
         <attribute name="fee" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="rate" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
         <attribute name="storeName" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="PlayData" positionX="-2882" positionY="-193" width="128" height="148"/>
-        <element name="ShopSettingData" positionX="-2648" positionY="-169" width="128" height="88"/>
+        <element name="PlayDataEntity" positionX="-2882" positionY="-193" width="128" height="148"/>
+        <element name="ShopSettingDataEntity" positionX="-2648" positionY="-169" width="128" height="88"/>
     </elements>
 </model>

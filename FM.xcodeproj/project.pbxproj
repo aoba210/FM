@@ -38,8 +38,8 @@
 		D8AB020E188B213C00E3EA7A /* FMRegistStoreNameAndRateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8AB020D188B213C00E3EA7A /* FMRegistStoreNameAndRateViewController.m */; };
 		D8C34828189BFF8700A6273C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C34827189BFF8700A6273C /* CoreData.framework */; };
 		D8C34833189C024600A6273C /* FMModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D8C34831189C024600A6273C /* FMModel.xcdatamodeld */; };
-		D8C34836189C041C00A6273C /* PlayData.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C34835189C041C00A6273C /* PlayData.m */; };
-		D8C34839189C041C00A6273C /* ShopSettingData.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C34838189C041C00A6273C /* ShopSettingData.m */; };
+		D8C34836189C041C00A6273C /* PlayDataEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C34835189C041C00A6273C /* PlayDataEntity.m */; };
+		D8C34839189C041C00A6273C /* ShopSettingDataEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C34838189C041C00A6273C /* ShopSettingDataEntity.m */; };
 		D8C3484C189C128700A6273C /* FMRegistNewStoreNameAndRateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C3484B189C128700A6273C /* FMRegistNewStoreNameAndRateViewController.m */; };
 		D8C34850189C172600A6273C /* FMDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C3484F189C172600A6273C /* FMDBManager.m */; };
 		D8C34853189C17C000A6273C /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C34852189C17C000A6273C /* CoreDataManager.m */; };
@@ -105,10 +105,10 @@
 		D8AB020D188B213C00E3EA7A /* FMRegistStoreNameAndRateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMRegistStoreNameAndRateViewController.m; sourceTree = "<group>"; };
 		D8C34827189BFF8700A6273C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		D8C34832189C024600A6273C /* FMModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FMModel.xcdatamodel; sourceTree = "<group>"; };
-		D8C34834189C041C00A6273C /* PlayData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayData.h; sourceTree = "<group>"; };
-		D8C34835189C041C00A6273C /* PlayData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayData.m; sourceTree = "<group>"; };
-		D8C34837189C041C00A6273C /* ShopSettingData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopSettingData.h; sourceTree = "<group>"; };
-		D8C34838189C041C00A6273C /* ShopSettingData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopSettingData.m; sourceTree = "<group>"; };
+		D8C34834189C041C00A6273C /* PlayDataEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayDataEntity.h; sourceTree = "<group>"; };
+		D8C34835189C041C00A6273C /* PlayDataEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayDataEntity.m; sourceTree = "<group>"; };
+		D8C34837189C041C00A6273C /* ShopSettingDataEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopSettingDataEntity.h; sourceTree = "<group>"; };
+		D8C34838189C041C00A6273C /* ShopSettingDataEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopSettingDataEntity.m; sourceTree = "<group>"; };
 		D8C3484A189C128700A6273C /* FMRegistNewStoreNameAndRateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMRegistNewStoreNameAndRateViewController.h; sourceTree = "<group>"; };
 		D8C3484B189C128700A6273C /* FMRegistNewStoreNameAndRateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMRegistNewStoreNameAndRateViewController.m; sourceTree = "<group>"; };
 		D8C3484E189C172600A6273C /* FMDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDBManager.h; sourceTree = "<group>"; };
@@ -306,10 +306,10 @@
 			isa = PBXGroup;
 			children = (
 				D8C34831189C024600A6273C /* FMModel.xcdatamodeld */,
-				D8C34837189C041C00A6273C /* ShopSettingData.h */,
-				D8C34838189C041C00A6273C /* ShopSettingData.m */,
-				D8C34834189C041C00A6273C /* PlayData.h */,
-				D8C34835189C041C00A6273C /* PlayData.m */,
+				D8C34837189C041C00A6273C /* ShopSettingDataEntity.h */,
+				D8C34838189C041C00A6273C /* ShopSettingDataEntity.m */,
+				D8C34834189C041C00A6273C /* PlayDataEntity.h */,
+				D8C34835189C041C00A6273C /* PlayDataEntity.m */,
 			);
 			path = DB;
 			sourceTree = "<group>";
@@ -644,12 +644,12 @@
 				D8047D9F190963970097126E /* FMRegistShopTableViewCell.m in Sources */,
 				D8AB01F6188B0E4F00E3EA7A /* FMEntryIncomeAndExpenditureViewController.m in Sources */,
 				D8C3484C189C128700A6273C /* FMRegistNewStoreNameAndRateViewController.m in Sources */,
-				D8C34836189C041C00A6273C /* PlayData.m in Sources */,
+				D8C34836189C041C00A6273C /* PlayDataEntity.m in Sources */,
 				D8C34853189C17C000A6273C /* CoreDataManager.m in Sources */,
 				D8AB0201188B1E4700E3EA7A /* FMStoreNameAndRateTableViewViewController.m in Sources */,
 				D8AB01D7188AEF2100E3EA7A /* FMWarRecordViewController.m in Sources */,
 				D8AB01D8188AEF2100E3EA7A /* FMWarRecordDetailOfDataViewController.m in Sources */,
-				D8C34839189C041C00A6273C /* ShopSettingData.m in Sources */,
+				D8C34839189C041C00A6273C /* ShopSettingDataEntity.m in Sources */,
 				D8AB01FA188B112500E3EA7A /* FMEntryStoreNameViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
