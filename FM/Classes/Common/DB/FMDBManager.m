@@ -8,11 +8,9 @@
 
 #import "FMDBManager.h"
 #import "CoreDataManager.h"
-#import "ShopSettingDataEntity.h"
-#import "PlayDataEntity.h"
 
 static NSString *const kDBName = @"FMModel";
-static NSString *const kShopSettingDataTableName = @"ShopSettingData";
+static NSString *const kShopSettingDataTableName = @"ShopSettingDataEntity";
 
 @implementation FMDBManager
 

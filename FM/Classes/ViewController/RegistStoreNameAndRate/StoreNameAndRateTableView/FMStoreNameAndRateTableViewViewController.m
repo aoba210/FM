@@ -12,7 +12,7 @@
 
 @interface FMStoreNameAndRateTableViewViewController ()
 {
-    NSArray *registShopData;
+    NSArray *registShopDataArray;
 }
 
 @end
@@ -31,9 +31,17 @@
 {
     [super viewDidLoad];
 
-    registShopData = [FMDBManager selectAllSettingShopData];
     UINib *nib = [UINib nibWithNibName:@"FMRegistShopTableViewCell" bundle:nil];
     [self.tableView registerNib:nib forCellReuseIdentifier:@"Cell"];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    registShopDataArray = [FMDBManager selectAllSettingShopData];
+    ShopSettingDataEntity *shopSettingDataEntity = [registShopDataArray objectAtIndex:1];
+    NSLog(@"name = %@", shopSettingDataEntity.fee);
+    
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -50,12 +58,13 @@
 {
     return 1;
 }
+
 /**
  * 登録してある店舗の数だけ返す
  */
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return registShopData.count;
+    return registShopDataArray.count;
 }
 
 /**
@@ -70,7 +79,6 @@
  * セル内処理を記述
  */
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    //dequeueReusableCellWithIdentifierに識別文字列を渡すことでインスタンスを取得できるようにする
     FMRegistShopTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     cell.registShopLabel.text = @"ああああ";
     

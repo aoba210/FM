@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ShopSettingDataEntity.h"
+#import "PlayDataEntity.h"
 
 @interface FMDBManager : NSObject
 

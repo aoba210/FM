@@ -1,5 +1,5 @@
 //
-//  ShopSettingData.m
+//  ShopSettingDataEntity.m
 //  FM
 //
 //  Created by T.N on 2014/02/01.
