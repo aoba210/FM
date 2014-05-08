@@ -10,7 +10,7 @@
 #import <CoreData/CoreData.h>
 
 
-@interface ShopSettingData : NSManagedObject
+@interface ShopSettingDataEntity : NSManagedObject
 
 @property (nonatomic, retain) NSString * storeName;
 @property (nonatomic, retain) NSNumber * fee;

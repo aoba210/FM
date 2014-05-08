@@ -6,10 +6,10 @@
 //  Copyright (c) 2014年 Nishida.Takahiro. All rights reserved.
 //
 
-#import "ShopSettingData.h"
+#import "ShopSettingDataEntity.h"
 
 
-@implementation ShopSettingData
+@implementation ShopSettingDataEntity
 
 @dynamic storeName;
 @dynamic fee;

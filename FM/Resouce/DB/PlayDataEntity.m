@@ -6,10 +6,10 @@
 //  Copyright (c) 2014年 Nishida.Takahiro. All rights reserved.
 //
 
-#import "PlayData.h"
+#import "PlayDataEntity.h"
 
 
-@implementation PlayData
+@implementation PlayDataEntity
 
 @dynamic date;
 @dynamic firstRank;

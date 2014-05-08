@@ -10,7 +10,7 @@
 #import <CoreData/CoreData.h>
 
 
-@interface PlayData : NSManagedObject
+@interface PlayDataEntity : NSManagedObject
 
 @property (nonatomic, retain) NSDate * date;
 @property (nonatomic, retain) NSString * firstRank;
