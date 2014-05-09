@@ -50,8 +50,10 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     registShopDataArray = [FMDBManager selectAllSettingShopData];
-    //TableViewCellのハイライトを消す。
+    // セルのハイライトを消す
     [self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:NO];
+    // 店舗設定でデータを更新した後にセルも更新
+    [self.tableView reloadData];
     
 }
 
