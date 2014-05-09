@@ -15,7 +15,10 @@
 {
     NSArray *registShopDataArray;
     ShopSettingDataEntity *shopSettingDataEntity;
+    ShopSettingDataEntity *updateShopSettingDataEntity;
 }
+
+@property (nonatomic) ShopSettingDataEntity *updateShopSettingDataEntity;
 @property (nonatomic) NSString *shopNameText;
 @property (nonatomic) NSString *rateText;
 @property (nonatomic) NSString *feeText;
@@ -23,6 +26,7 @@
 @end
 
 @implementation FMStoreNameAndRateTableViewViewController
+@synthesize updateShopSettingDataEntity;
 @synthesize shopNameText;
 @synthesize rateText;
 @synthesize feeText;
@@ -100,8 +104,8 @@
  * Cell が選択された時
  */
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath: (NSIndexPath*) indexPath{
-    ShopSettingDataEntity *selectShopSettingDataEntity = [registShopDataArray objectAtIndex:indexPath.row];
-    [self performSegueWithIdentifier:@"toFMRegistNewStoreNameAndRateViewController" sender:selectShopSettingDataEntity];
+    updateShopSettingDataEntity = [registShopDataArray objectAtIndex:indexPath.row];
+    [self performSegueWithIdentifier:@"toFMRegistNewStoreNameAndRateViewController" sender:updateShopSettingDataEntity];
 }
 
 /**
@@ -110,9 +114,11 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([[segue identifier] isEqualToString:@"toFMRegistNewStoreNameAndRateViewController"]) {
         FMRegistNewStoreNameAndRateViewController *registStoreNameAndRateViewController =[segue destinationViewController];
+        registStoreNameAndRateViewController.updateShopSettingDataEntity = updateShopSettingDataEntity;
         registStoreNameAndRateViewController.shopNameText = [sender valueForKey:@"storeName"];
         registStoreNameAndRateViewController.rateText = [[sender valueForKey:@"rate"] stringValue];
         registStoreNameAndRateViewController.feeText = [[sender valueForKey:@"fee"] stringValue];
+        NSLog(@"before data = %@", updateShopSettingDataEntity);
      }
 }
 

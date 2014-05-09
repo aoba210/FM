@@ -14,6 +14,6 @@
 
 + (void)registStoreName:(NSString *)storeName rate:(NSNumber *)rate fee:(NSNumber *)fee;
 + (NSArray *)selectAllSettingShopData;
-+ (void)updateShopSettingData:(NSString *)storeName rate:(NSNumber *)rate fee:(NSNumber *)fee;
++ (void)updateShopSettingData:(ShopSettingDataEntity *)shopSettingDataEntity storeName:(NSString *)storeName rate:(NSNumber *)rate fee:(NSNumber *)fee;
 
 @end

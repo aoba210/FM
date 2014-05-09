@@ -18,6 +18,7 @@
 @end
 
 @implementation FMRegistNewStoreNameAndRateViewController
+@synthesize updateShopSettingDataEntity;
 @synthesize shopNameText;
 @synthesize rateText;
 @synthesize feeText;
@@ -86,15 +87,22 @@
  * 入力した店舗名/レート/場代を保存します
  */
 - (IBAction)saveStoreNameAndRateAndFeeAction:(id)sender {
-    if (!shopNameText) {
-        NSString * storeName = self.storeNameTextField.text;
-        float floatRate = [self.rateTextField.text floatValue];
-        NSNumber * rate = [NSNumber numberWithFloat:floatRate];
-        int intFee = [self.feeTextField.text intValue];
-        NSNumber * fee = [NSNumber numberWithInt:intFee];
-
+    
+    NSString * storeName = self.storeNameTextField.text;
+    float floatRate = [self.rateTextField.text floatValue];
+    NSNumber * rate = [NSNumber numberWithFloat:floatRate];
+    int intFee = [self.feeTextField.text intValue];
+    NSNumber * fee = [NSNumber numberWithInt:intFee];
+    
+    // 店舗設定を新規追加するとき
+    if (!shopNameText && !rateText && !feeText) {
         [FMDBManager registStoreName:storeName rate:rate fee:fee];
     }
+    // 店舗設定を更新するとき
+    else {
+        [FMDBManager updateShopSettingData:updateShopSettingDataEntity storeName:storeName rate:rate fee:fee];
+    }
+    
     [self.navigationController popViewControllerAnimated:YES];
 }
 
