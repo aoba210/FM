@@ -9,16 +9,23 @@
 #import "FMStoreNameAndRateTableViewViewController.h"
 #import "FMDBManager.h"
 #import "FMRegistShopTableViewCell.h"
+#import "FMRegistNewStoreNameAndRateViewController.h"
 
 @interface FMStoreNameAndRateTableViewViewController ()
 {
     NSArray *registShopDataArray;
     ShopSettingDataEntity *shopSettingDataEntity;
 }
+@property (nonatomic) NSString *shopNameText;
+@property (nonatomic) NSString *rateText;
+@property (nonatomic) NSString *feeText;
 
 @end
 
 @implementation FMStoreNameAndRateTableViewViewController
+@synthesize shopNameText;
+@synthesize rateText;
+@synthesize feeText;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -93,8 +100,26 @@
  * Cell が選択された時
  */
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath: (NSIndexPath*) indexPath{
-    [self performSegueWithIdentifier:@"toFMRegistNewStoreNameAndRateViewController" sender:self];
+    ShopSettingDataEntity *selectShopSettingDataEntity = [registShopDataArray objectAtIndex:indexPath.row];
+    [self performSegueWithIdentifier:@"toFMRegistNewStoreNameAndRateViewController" sender:selectShopSettingDataEntity];
 }
 
+/**
+ * Segue で次の ViewController へ移行するときに選択されたCellの画像情報を渡す
+ */
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if ([[segue identifier] isEqualToString:@"toFMRegistNewStoreNameAndRateViewController"]) {
+        FMRegistNewStoreNameAndRateViewController *registStoreNameAndRateViewController =[segue destinationViewController];
+
+        NSLog(@"data = %@",[sender valueForKey:@"storeName"]);
+        
+        registStoreNameAndRateViewController.shopNameText = [sender valueForKey:@"storeName"];
+        registStoreNameAndRateViewController.rateText = [[sender valueForKey:@"rate"] stringValue];
+        registStoreNameAndRateViewController.feeText = [[sender valueForKey:@"fee"] stringValue];
+        
+        
+        
+     }
+}
 
 @end

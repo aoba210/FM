@@ -13,14 +13,14 @@
 {
 }
 
-@property (weak, nonatomic) IBOutlet UITextField *storeNameTextField;
-@property (weak, nonatomic) IBOutlet UITextField *rateTextField;
-@property (weak, nonatomic) IBOutlet UITextField *feeTextField;
 @property(nonatomic,strong) UITapGestureRecognizer *singleTap;
 
 @end
 
 @implementation FMRegistNewStoreNameAndRateViewController
+@synthesize shopNameText;
+@synthesize rateText;
+@synthesize feeText;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -39,6 +39,14 @@
     self.singleTap.delegate = self;
     self.singleTap.numberOfTapsRequired = 1;
     [self.view addGestureRecognizer:self.singleTap];
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    self.storeNameTextField.text = shopNameText;
+    self.rateTextField.text = rateText;
+    self.feeTextField.text = feeText;
 }
 
 - (void)didReceiveMemoryWarning
