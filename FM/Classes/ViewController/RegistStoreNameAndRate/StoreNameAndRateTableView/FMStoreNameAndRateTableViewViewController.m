@@ -110,15 +110,9 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([[segue identifier] isEqualToString:@"toFMRegistNewStoreNameAndRateViewController"]) {
         FMRegistNewStoreNameAndRateViewController *registStoreNameAndRateViewController =[segue destinationViewController];
-
-        NSLog(@"data = %@",[sender valueForKey:@"storeName"]);
-        
         registStoreNameAndRateViewController.shopNameText = [sender valueForKey:@"storeName"];
         registStoreNameAndRateViewController.rateText = [[sender valueForKey:@"rate"] stringValue];
         registStoreNameAndRateViewController.feeText = [[sender valueForKey:@"fee"] stringValue];
-        
-        
-        
      }
 }
 

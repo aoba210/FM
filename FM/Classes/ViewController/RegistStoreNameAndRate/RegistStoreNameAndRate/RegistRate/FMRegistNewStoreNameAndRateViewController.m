@@ -86,13 +86,15 @@
  * 入力した店舗名/レート/場代を保存します
  */
 - (IBAction)saveStoreNameAndRateAndFeeAction:(id)sender {
-    NSString * storeName = self.storeNameTextField.text;
-    float floatRate = [self.rateTextField.text floatValue];
-    NSNumber * rate = [NSNumber numberWithFloat:floatRate];
-    int intFee = [self.feeTextField.text intValue];
-    NSNumber * fee = [NSNumber numberWithInt:intFee];
+    if (!shopNameText) {
+        NSString * storeName = self.storeNameTextField.text;
+        float floatRate = [self.rateTextField.text floatValue];
+        NSNumber * rate = [NSNumber numberWithFloat:floatRate];
+        int intFee = [self.feeTextField.text intValue];
+        NSNumber * fee = [NSNumber numberWithInt:intFee];
 
-    [FMDBManager registStoreName:storeName rate:rate fee:fee];
+        [FMDBManager registStoreName:storeName rate:rate fee:fee];
+    }
     [self.navigationController popViewControllerAnimated:YES];
 }
 
