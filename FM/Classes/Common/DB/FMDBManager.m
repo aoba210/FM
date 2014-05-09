@@ -10,6 +10,7 @@
 #import "CoreDataManager.h"
 
 static NSString *const kDBName = @"FMModel";
+static NSString *const kPlayDataTableName = @"PlayDataEntity";
 static NSString *const kShopSettingDataTableName = @"ShopSettingDataEntity";
 
 @implementation FMDBManager
@@ -34,9 +35,21 @@ static NSString *const kShopSettingDataTableName = @"ShopSettingDataEntity";
 + (NSArray *)selectAllSettingShopData
 {
     CoreDataManager *coreDataManager = [CoreDataManager getInstance:kDBName];
-    NSArray *playerDataArray = [coreDataManager select:kShopSettingDataTableName where:nil];
-    
-    return playerDataArray;
+    NSArray *settingShopDataArray = [coreDataManager select:kShopSettingDataTableName where:nil];
+    return settingShopDataArray;
+}
+
+/**
+ * 店舗設定データを更新
+ */
++ (void)updateShopSettingData:(NSString *)storeName rate:(NSNumber *)rate fee:(NSNumber *)fee
+{
+    CoreDataManager *coreDataManager = [CoreDataManager getInstance:kDBName];
+    ShopSettingDataEntity *shopSettingData = (ShopSettingDataEntity *)[coreDataManager new:kShopSettingDataTableName];
+    shopSettingData.storeName = storeName;
+    shopSettingData.rate = rate;
+    shopSettingData.fee = fee;
+    [coreDataManager save];
 }
 
 @end
