@@ -90,7 +90,7 @@
     
     NSString * storeName = self.storeNameTextField.text;
     float floatRate = [self.rateTextField.text floatValue];
-    NSNumber * rate = [NSNumber numberWithFloat:floatRate];
+    NSNumber * rate = [NSNumber numberWithFloat:floatRate];    
     int intFee = [self.feeTextField.text intValue];
     NSNumber * fee = [NSNumber numberWithInt:intFee];
     
@@ -102,6 +102,17 @@
     else {
         [FMDBManager updateShopSettingData:updateShopSettingDataEntity storeName:storeName rate:rate fee:fee];
     }
+    
+    
+    // alert
+    UIAlertView *alert = [[UIAlertView alloc]
+                          initWithTitle:@"店舗設定"
+                          message:@"店舗設定を保存しました。"
+                          delegate:nil
+                          cancelButtonTitle:nil
+                          otherButtonTitles:@"OK", nil
+                          ];
+    [alert show];
     
     [self.navigationController popViewControllerAnimated:YES];
 }
