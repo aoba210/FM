@@ -14,6 +14,6 @@
 
 @property (nonatomic, retain) NSString * storeName;
 @property (nonatomic, retain) NSNumber * fee;
-@property (nonatomic, retain) NSNumber * rate;
+@property (nonatomic, retain) NSString * rate;
 
 @end

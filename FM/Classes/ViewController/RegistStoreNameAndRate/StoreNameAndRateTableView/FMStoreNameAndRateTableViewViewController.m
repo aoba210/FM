@@ -95,7 +95,7 @@
     FMRegistShopTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     shopSettingDataEntity = [registShopDataArray objectAtIndex:indexPath.row];
     NSString *storeName = shopSettingDataEntity.storeName;
-    NSString *rate = [shopSettingDataEntity.rate stringValue];
+    NSString *rate = shopSettingDataEntity.rate;
     NSString *labelText = [NSString stringWithFormat:@"%@ %@", storeName, rate];
     cell.registShopLabel.text = labelText;
     
@@ -120,8 +120,7 @@
         registStoreNameAndRateViewController.shopNameText = [sender valueForKey:@"storeName"];
         registStoreNameAndRateViewController.rateText = [[sender valueForKey:@"rate"] stringValue];
         registStoreNameAndRateViewController.feeText = [[sender valueForKey:@"fee"] stringValue];
-        NSLog(@"before data = %@", updateShopSettingDataEntity);
-     }
+    }
 }
 
 @end

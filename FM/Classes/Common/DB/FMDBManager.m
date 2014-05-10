@@ -19,7 +19,7 @@ static NSString *const kShopSettingDataTableName = @"ShopSettingDataEntity";
 /**
  * 店舗名/レート/場代を登録
  */
-+ (void)registStoreName:(NSString *)storeName rate:(NSNumber *)rate fee:(NSNumber *)fee
++ (void)registStoreName:(NSString *)storeName rate:(NSString *)rate fee:(NSNumber *)fee
 {
     CoreDataManager *coreDataManager = [CoreDataManager getInstance:kDBName];
     ShopSettingDataEntity *shopSettingData = (ShopSettingDataEntity *)[coreDataManager new:kShopSettingDataTableName];
@@ -42,7 +42,7 @@ static NSString *const kShopSettingDataTableName = @"ShopSettingDataEntity";
 /**
  * 店舗設定データを更新
  */
-+ (void)updateShopSettingData:(ShopSettingDataEntity *)shopSettingDataEntity storeName:(NSString *)storeName rate:(NSNumber *)rate fee:(NSNumber *)fee
++ (void)updateShopSettingData:(ShopSettingDataEntity *)shopSettingDataEntity storeName:(NSString *)storeName rate:(NSString *)rate fee:(NSNumber *)fee
 {
     CoreDataManager *coreDataManager = [CoreDataManager getInstance:kDBName];
     shopSettingDataEntity.storeName = storeName;

@@ -89,8 +89,7 @@
 - (IBAction)saveStoreNameAndRateAndFeeAction:(id)sender {
     
     NSString * storeName = self.storeNameTextField.text;
-    float floatRate = [self.rateTextField.text floatValue];
-    NSNumber * rate = [NSNumber numberWithFloat:floatRate];    
+    NSString * rate = self.rateTextField.text;
     int intFee = [self.feeTextField.text intValue];
     NSNumber * fee = [NSNumber numberWithInt:intFee];
     

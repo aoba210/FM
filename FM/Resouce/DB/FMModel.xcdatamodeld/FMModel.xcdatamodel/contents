@@ -11,7 +11,7 @@
     </entity>
     <entity name="ShopSettingDataEntity" representedClassName="ShopSettingData" syncable="YES">
         <attribute name="fee" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
-        <attribute name="rate" optional="YES" attributeType="Float" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="rate" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="storeName" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>

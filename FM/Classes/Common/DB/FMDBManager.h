@@ -12,8 +12,8 @@
 
 @interface FMDBManager : NSObject
 
-+ (void)registStoreName:(NSString *)storeName rate:(NSNumber *)rate fee:(NSNumber *)fee;
++ (void)registStoreName:(NSString *)storeName rate:(NSString *)rate fee:(NSNumber *)fee;
 + (NSArray *)selectAllSettingShopData;
-+ (void)updateShopSettingData:(ShopSettingDataEntity *)shopSettingDataEntity storeName:(NSString *)storeName rate:(NSNumber *)rate fee:(NSNumber *)fee;
++ (void)updateShopSettingData:(ShopSettingDataEntity *)shopSettingDataEntity storeName:(NSString *)storeName rate:(NSString *)rate fee:(NSNumber *)fee;
 
 @end
