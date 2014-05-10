@@ -111,14 +111,14 @@
 }
 
 /**
- * Segue で次の ViewController へ移行するときに選択されたCellの画像情報を渡す
+ * セグエで次の画面へ移行するときに選択されたセルの値を渡す
  */
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if ([[segue identifier] isEqualToString:@"toFMRegistNewStoreNameAndRateViewController"]) {
         FMRegistNewStoreNameAndRateViewController *registStoreNameAndRateViewController =[segue destinationViewController];
         registStoreNameAndRateViewController.updateShopSettingDataEntity = updateShopSettingDataEntity;
         registStoreNameAndRateViewController.shopNameText = [sender valueForKey:@"storeName"];
-        registStoreNameAndRateViewController.rateText = [[sender valueForKey:@"rate"] stringValue];
+        registStoreNameAndRateViewController.rateText = [sender valueForKey:@"rate"];
         registStoreNameAndRateViewController.feeText = [[sender valueForKey:@"fee"] stringValue];
     }
 }
