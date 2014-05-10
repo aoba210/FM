@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D8047D9C190962820097126E /* FMRegistShopTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8047D9B190962820097126E /* FMRegistShopTableViewCell.xib */; };
-		D8047D9F190963970097126E /* FMRegistShopTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8047D9E190963970097126E /* FMRegistShopTableViewCell.m */; };
 		D8AB0161188AC9EF00E3EA7A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8AB0160188AC9EF00E3EA7A /* Foundation.framework */; };
 		D8AB0163188AC9EF00E3EA7A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8AB0162188AC9EF00E3EA7A /* CoreGraphics.framework */; };
 		D8AB0165188AC9EF00E3EA7A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8AB0164188AC9EF00E3EA7A /* UIKit.framework */; };
@@ -33,14 +31,13 @@
 		D8AB01F6188B0E4F00E3EA7A /* FMEntryIncomeAndExpenditureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8AB01F5188B0E4F00E3EA7A /* FMEntryIncomeAndExpenditureViewController.m */; };
 		D8AB01FA188B112500E3EA7A /* FMEntryStoreNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8AB01F9188B112500E3EA7A /* FMEntryStoreNameViewController.m */; };
 		D8AB0201188B1E4700E3EA7A /* FMStoreNameAndRateTableViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8AB0200188B1E4700E3EA7A /* FMStoreNameAndRateTableViewViewController.m */; };
-		D8AB0208188B209000E3EA7A /* FMEditStoreNameAndRateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8AB0207188B209000E3EA7A /* FMEditStoreNameAndRateViewController.m */; };
-		D8AB020B188B211200E3EA7A /* FMDetailStoreNameAndRateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8AB020A188B211200E3EA7A /* FMDetailStoreNameAndRateViewController.m */; };
-		D8AB020E188B213C00E3EA7A /* FMRegistStoreNameAndRateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8AB020D188B213C00E3EA7A /* FMRegistStoreNameAndRateViewController.m */; };
+		D8B5AF73191E564D0050B49F /* FMRegistShopTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D8B5AF72191E564D0050B49F /* FMRegistShopTableViewCell.xib */; };
+		D8B5AF76191E56C30050B49F /* FMRegistShopTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D8B5AF75191E56C30050B49F /* FMRegistShopTableViewCell.m */; };
+		D8B5AF79191E57040050B49F /* FMRegistNewStoreNameAndRateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8B5AF78191E57040050B49F /* FMRegistNewStoreNameAndRateViewController.m */; };
 		D8C34828189BFF8700A6273C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C34827189BFF8700A6273C /* CoreData.framework */; };
 		D8C34833189C024600A6273C /* FMModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D8C34831189C024600A6273C /* FMModel.xcdatamodeld */; };
 		D8C34836189C041C00A6273C /* PlayDataEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C34835189C041C00A6273C /* PlayDataEntity.m */; };
 		D8C34839189C041C00A6273C /* ShopSettingDataEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C34838189C041C00A6273C /* ShopSettingDataEntity.m */; };
-		D8C3484C189C128700A6273C /* FMRegistNewStoreNameAndRateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C3484B189C128700A6273C /* FMRegistNewStoreNameAndRateViewController.m */; };
 		D8C34850189C172600A6273C /* FMDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C3484F189C172600A6273C /* FMDBManager.m */; };
 		D8C34853189C17C000A6273C /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D8C34852189C17C000A6273C /* CoreDataManager.m */; };
 /* End PBXBuildFile section */
@@ -56,9 +53,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D8047D9B190962820097126E /* FMRegistShopTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FMRegistShopTableViewCell.xib; path = ../../../../Resouce/xib/FMRegistShopTableViewCell.xib; sourceTree = "<group>"; };
-		D8047D9D190963970097126E /* FMRegistShopTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMRegistShopTableViewCell.h; path = ../RegistStoreNameAndRate/FMRegistShopTableViewCell.h; sourceTree = "<group>"; };
-		D8047D9E190963970097126E /* FMRegistShopTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMRegistShopTableViewCell.m; path = ../RegistStoreNameAndRate/FMRegistShopTableViewCell.m; sourceTree = "<group>"; };
 		D8AB015D188AC9EF00E3EA7A /* FM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8AB0160188AC9EF00E3EA7A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D8AB0162188AC9EF00E3EA7A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -97,20 +91,17 @@
 		D8AB01F9188B112500E3EA7A /* FMEntryStoreNameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMEntryStoreNameViewController.m; sourceTree = "<group>"; };
 		D8AB01FF188B1E4700E3EA7A /* FMStoreNameAndRateTableViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMStoreNameAndRateTableViewViewController.h; sourceTree = "<group>"; };
 		D8AB0200188B1E4700E3EA7A /* FMStoreNameAndRateTableViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMStoreNameAndRateTableViewViewController.m; sourceTree = "<group>"; };
-		D8AB0206188B209000E3EA7A /* FMEditStoreNameAndRateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMEditStoreNameAndRateViewController.h; sourceTree = "<group>"; };
-		D8AB0207188B209000E3EA7A /* FMEditStoreNameAndRateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMEditStoreNameAndRateViewController.m; sourceTree = "<group>"; };
-		D8AB0209188B211100E3EA7A /* FMDetailStoreNameAndRateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDetailStoreNameAndRateViewController.h; sourceTree = "<group>"; };
-		D8AB020A188B211200E3EA7A /* FMDetailStoreNameAndRateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDetailStoreNameAndRateViewController.m; sourceTree = "<group>"; };
-		D8AB020C188B213C00E3EA7A /* FMRegistStoreNameAndRateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMRegistStoreNameAndRateViewController.h; sourceTree = "<group>"; };
-		D8AB020D188B213C00E3EA7A /* FMRegistStoreNameAndRateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMRegistStoreNameAndRateViewController.m; sourceTree = "<group>"; };
+		D8B5AF72191E564D0050B49F /* FMRegistShopTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FMRegistShopTableViewCell.xib; sourceTree = "<group>"; };
+		D8B5AF74191E56C30050B49F /* FMRegistShopTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMRegistShopTableViewCell.h; sourceTree = "<group>"; };
+		D8B5AF75191E56C30050B49F /* FMRegistShopTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMRegistShopTableViewCell.m; sourceTree = "<group>"; };
+		D8B5AF77191E57040050B49F /* FMRegistNewStoreNameAndRateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMRegistNewStoreNameAndRateViewController.h; sourceTree = "<group>"; };
+		D8B5AF78191E57040050B49F /* FMRegistNewStoreNameAndRateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMRegistNewStoreNameAndRateViewController.m; sourceTree = "<group>"; };
 		D8C34827189BFF8700A6273C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		D8C34832189C024600A6273C /* FMModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FMModel.xcdatamodel; sourceTree = "<group>"; };
 		D8C34834189C041C00A6273C /* PlayDataEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayDataEntity.h; sourceTree = "<group>"; };
 		D8C34835189C041C00A6273C /* PlayDataEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayDataEntity.m; sourceTree = "<group>"; };
 		D8C34837189C041C00A6273C /* ShopSettingDataEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopSettingDataEntity.h; sourceTree = "<group>"; };
 		D8C34838189C041C00A6273C /* ShopSettingDataEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopSettingDataEntity.m; sourceTree = "<group>"; };
-		D8C3484A189C128700A6273C /* FMRegistNewStoreNameAndRateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMRegistNewStoreNameAndRateViewController.h; sourceTree = "<group>"; };
-		D8C3484B189C128700A6273C /* FMRegistNewStoreNameAndRateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMRegistNewStoreNameAndRateViewController.m; sourceTree = "<group>"; };
 		D8C3484E189C172600A6273C /* FMDBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDBManager.h; sourceTree = "<group>"; };
 		D8C3484F189C172600A6273C /* FMDBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDBManager.m; sourceTree = "<group>"; };
 		D8C34851189C17C000A6273C /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
@@ -453,29 +444,17 @@
 			isa = PBXGroup;
 			children = (
 				D8AB01FE188B1DBD00E3EA7A /* StoreNameAndRateTableView */,
-				D8AB0202188B1F2B00E3EA7A /* DetailStoreNameAndRate */,
-				D8AB01FC188B1DBD00E3EA7A /* EditStoreNameAndRate */,
 				D8AB01FD188B1DBD00E3EA7A /* RegistStoreNameAndRate */,
 			);
 			name = Regist;
 			path = RegistStoreNameAndRate;
 			sourceTree = "<group>";
 		};
-		D8AB01FC188B1DBD00E3EA7A /* EditStoreNameAndRate */ = {
-			isa = PBXGroup;
-			children = (
-				D8AB0206188B209000E3EA7A /* FMEditStoreNameAndRateViewController.h */,
-				D8AB0207188B209000E3EA7A /* FMEditStoreNameAndRateViewController.m */,
-			);
-			path = EditStoreNameAndRate;
-			sourceTree = "<group>";
-		};
 		D8AB01FD188B1DBD00E3EA7A /* RegistStoreNameAndRate */ = {
 			isa = PBXGroup;
 			children = (
-				D8AB020C188B213C00E3EA7A /* FMRegistStoreNameAndRateViewController.h */,
-				D8AB020D188B213C00E3EA7A /* FMRegistStoreNameAndRateViewController.m */,
-				D8C34849189C122500A6273C /* RegistNewStoreNameAndRate */,
+				D8B5AF77191E57040050B49F /* FMRegistNewStoreNameAndRateViewController.h */,
+				D8B5AF78191E57040050B49F /* FMRegistNewStoreNameAndRateViewController.m */,
 			);
 			path = RegistStoreNameAndRate;
 			sourceTree = "<group>";
@@ -485,20 +464,11 @@
 			children = (
 				D8AB01FF188B1E4700E3EA7A /* FMStoreNameAndRateTableViewViewController.h */,
 				D8AB0200188B1E4700E3EA7A /* FMStoreNameAndRateTableViewViewController.m */,
-				D8047D9D190963970097126E /* FMRegistShopTableViewCell.h */,
-				D8047D9E190963970097126E /* FMRegistShopTableViewCell.m */,
-				D8047D9B190962820097126E /* FMRegistShopTableViewCell.xib */,
+				D8B5AF74191E56C30050B49F /* FMRegistShopTableViewCell.h */,
+				D8B5AF75191E56C30050B49F /* FMRegistShopTableViewCell.m */,
+				D8B5AF72191E564D0050B49F /* FMRegistShopTableViewCell.xib */,
 			);
 			path = StoreNameAndRateTableView;
-			sourceTree = "<group>";
-		};
-		D8AB0202188B1F2B00E3EA7A /* DetailStoreNameAndRate */ = {
-			isa = PBXGroup;
-			children = (
-				D8AB0209188B211100E3EA7A /* FMDetailStoreNameAndRateViewController.h */,
-				D8AB020A188B211200E3EA7A /* FMDetailStoreNameAndRateViewController.m */,
-			);
-			path = DetailStoreNameAndRate;
 			sourceTree = "<group>";
 		};
 		D8C3482D189C010800A6273C /* DB */ = {
@@ -508,16 +478,6 @@
 				D8C3484F189C172600A6273C /* FMDBManager.m */,
 			);
 			path = DB;
-			sourceTree = "<group>";
-		};
-		D8C34849189C122500A6273C /* RegistNewStoreNameAndRate */ = {
-			isa = PBXGroup;
-			children = (
-				D8C3484A189C128700A6273C /* FMRegistNewStoreNameAndRateViewController.h */,
-				D8C3484B189C128700A6273C /* FMRegistNewStoreNameAndRateViewController.m */,
-			);
-			name = RegistNewStoreNameAndRate;
-			path = RegistRate;
 			sourceTree = "<group>";
 		};
 		D8C3484D189C15F300A6273C /* coreData */ = {
@@ -606,9 +566,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8B5AF73191E564D0050B49F /* FMRegistShopTableViewCell.xib in Resources */,
 				D8AB0177188AC9EF00E3EA7A /* Main_iPad.storyboard in Resources */,
 				D8AB017C188AC9EF00E3EA7A /* Images.xcassets in Resources */,
-				D8047D9C190962820097126E /* FMRegistShopTableViewCell.xib in Resources */,
 				D8AB0174188AC9EF00E3EA7A /* Main_iPhone.storyboard in Resources */,
 				D8AB016B188AC9EF00E3EA7A /* InfoPlist.strings in Resources */,
 			);
@@ -633,19 +593,16 @@
 				D8AB01EF188B0DD700E3EA7A /* FMEntryDateViewController.m in Sources */,
 				D8C34850189C172600A6273C /* FMDBManager.m in Sources */,
 				D8AB01D9188AEF2100E3EA7A /* FMWarRecordDetailOfEachStoreViewController.m in Sources */,
+				D8B5AF76191E56C30050B49F /* FMRegistShopTableViewCell.m in Sources */,
 				D8AB01EA188B072200E3EA7A /* FMEntryAtOnceViewController.m in Sources */,
 				D8C34833189C024600A6273C /* FMModel.xcdatamodeld in Sources */,
-				D8AB020E188B213C00E3EA7A /* FMRegistStoreNameAndRateViewController.m in Sources */,
-				D8AB0208188B209000E3EA7A /* FMEditStoreNameAndRateViewController.m in Sources */,
 				D8AB016D188AC9EF00E3EA7A /* main.m in Sources */,
 				D8AB0171188AC9EF00E3EA7A /* FMAppDelegate.m in Sources */,
-				D8AB020B188B211200E3EA7A /* FMDetailStoreNameAndRateViewController.m in Sources */,
 				D8AB01DA188AEF2100E3EA7A /* FMWarRecordListOfEachStoreViewController.m in Sources */,
-				D8047D9F190963970097126E /* FMRegistShopTableViewCell.m in Sources */,
 				D8AB01F6188B0E4F00E3EA7A /* FMEntryIncomeAndExpenditureViewController.m in Sources */,
-				D8C3484C189C128700A6273C /* FMRegistNewStoreNameAndRateViewController.m in Sources */,
 				D8C34836189C041C00A6273C /* PlayDataEntity.m in Sources */,
 				D8C34853189C17C000A6273C /* CoreDataManager.m in Sources */,
+				D8B5AF79191E57040050B49F /* FMRegistNewStoreNameAndRateViewController.m in Sources */,
 				D8AB0201188B1E4700E3EA7A /* FMStoreNameAndRateTableViewViewController.m in Sources */,
 				D8AB01D7188AEF2100E3EA7A /* FMWarRecordViewController.m in Sources */,
 				D8AB01D8188AEF2100E3EA7A /* FMWarRecordDetailOfDataViewController.m in Sources */,
