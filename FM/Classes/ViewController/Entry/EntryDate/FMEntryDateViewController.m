@@ -43,9 +43,11 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
+/**
+ * textFieldを押下した時の処理
+ */
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
 {
     BOOL ret = YES;
@@ -65,13 +67,13 @@
         isDispDatePicker = YES;
         ret = NO;
     }
-    
-    NSLog(@"aaaaaaaaaaaaaaaa");
     return ret;
 }
 
 
-
+/**
+ * modalを隠す
+ */
 - (void)showModal:(UIView *)modalView
 {
     UIWindow *mainWindow = (((FMAppDelegate *) [UIApplication sharedApplication].delegate).window);
@@ -86,6 +88,9 @@
     [UIView commitAnimations];
 }
 
+/**
+ * modalを出す
+ */
 - (void)hideModal:(UIView*)modalView
 {
     CGSize offSize = [UIScreen mainScreen].bounds.size;
@@ -98,6 +103,9 @@
     [UIView commitAnimations];
 }
 
+/**
+ * modalが出終わった時の処理
+ */
 - (void)hideModalEnded:(NSString *)animationID finished:(NSNumber *)finished context:(void *)context
 {
     UIView *modalView = (__bridge_transfer UIView *)context;
@@ -105,6 +113,9 @@
     isDispDatePicker = NO;
 }
 
+/**
+ * datePickerのOKボタン押下時の処理
+ */
 -(void)didCommitButtonClicked:(ModalDatePicker *)controller selectedDate:(NSDate *)selectedDate
 {
     [self hideModal:controller.view];
@@ -115,6 +126,9 @@
     self.dateTextField.text = [formatter stringFromDate:selectedDate];
 }
 
+/**
+ * datePickerのcancelボタン押下時の処理
+ */
 -(void)didCancelButtonClicked:(ModalDatePicker *)controller
 {
     [self hideModal:controller.view];

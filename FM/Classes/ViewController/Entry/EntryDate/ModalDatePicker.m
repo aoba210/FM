@@ -27,26 +27,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 }
-
-//- (void)viewDidAppear:(BOOL)animated {
-//    if (self.dispDate != nil) {
-//        [self.picker setDate:self.dispDate];
-//    }
-//}
-//
-//- (void)viewDidUnload
-//{
-//    [self setPicker: nil];
-//    [super viewDidUnload];
-//    // Release any retained subviews of the main view.
-//}
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (IBAction)okClicked:(id)sender {
